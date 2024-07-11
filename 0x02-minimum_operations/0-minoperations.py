@@ -10,7 +10,7 @@ def minOperations(n):
 
     while pasted_chars < n:
         if copied_chars == 0:  # If no chars are copied
-            pasted_chars = copied_chars
+            copied_chars = pasted_chars
             counter += 1
 
         if pasted_chars == 1:  # If nothing has been pasted
