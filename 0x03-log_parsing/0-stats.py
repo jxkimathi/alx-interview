@@ -1,44 +1,60 @@
 #!/usr/bin/python3
+"""This module contains a script that reads from stdin and computes metrics"""
+import re
 import sys
 
 
-def print_msg(dict_sc, total_file_size):
-    """Method to print"""
-    print("File size: {}".format(total_file_size))
-    for key, val in sorted(dict_sc.items()):
-        if val != 0:
-            print("{}: {}".format(key, val))
+PATTERN = (r"^(\S+) ?"
+           r"- ?\[\S+ ?\S+\] "
+           r"\"GET /projects/260 HTTP/1\.1\" "
+           r"(\S+) (\S+)$")
 
-total_file_size = 0
-code = 0
-counter = 0
-dict_sc = {"200": 0,
-           "301": 0,
-           "400": 0,
-           "401": 0,
-           "403": 0,
-           "404": 0,
-           "405": 0,
-           "500": 0}
+
+def extract_status_and_size(line):
+    """Extracts the status code and size from a log line"""
+    match = re.search(PATTERN, line)
+
+    if match:
+        return (match.group(2), match.group(3))
+    else:
+        return None, None
+
+
+def printMetrics(total_size, status_codes):
+    """Prints the metrics for the log lines read so far"""
+    print("File size: {}".format(str(total_size)))
+    for status_code in sorted(status_codes.keys()):
+        if status_codes[status_code] != 0:
+            print("{}: {}".format(status_code, str(status_codes[status_code])))
+
+
+status_codes = {
+                "200": 0, "301": 0,
+                "400": 0, "401": 0,
+                "403": 0, "404": 0,
+                "405": 0, "500": 0}
+total_size = 0
+lines = 0
 
 try:
     for line in sys.stdin:
-        parsed_line = line.split()  # ✄ trimming
-        parsed_line = parsed_line[::-1]  # inverting
+        lines += 1
 
-        if len(parsed_line) > 2:
-            counter += 1
+        status_code, size = extract_status_and_size(line.strip())
+        if status_code and size:
+            try:
+                total_size += int(size)
+            except Exception:
+                pass
+            try:
+                if status_code in status_codes:
+                    status_codes[status_code] += 1
+            except Exception:
+                pass
 
-            if counter <= 10:
-                total_file_size += int(parsed_line[0])  # file size
-                code = parsed_line[1]  # status code
-
-                if (code in dict_sc.keys()):
-                    dict_sc[code] += 1
-
-            if (counter == 10):
-                print_msg(dict_sc, total_file_size)
-                counter = 0
-
-finally:
-    print_msg(dict_sc, total_file_size)
+        if lines % 10 == 0 and lines != 0:
+            printMetrics(total_size, status_codes)
+    printMetrics(total_size, status_codes)
+except KeyboardInterrupt:
+    printMetrics(total_size, status_codes)
+    raise
