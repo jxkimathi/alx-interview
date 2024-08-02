@@ -131,3 +131,24 @@ Most of the projects are some of the interview questions asked all by the anel t
             - Python Exceptions
 
         By studying these concepts and utilizing the resources provided, you will be well-prepared to tackle the log parsing project, effectively handling data streams, parsing log entries, and computing metrics based on the processed data.
+
+* [0x05-nqueens](./0x05-nqueens/) - Solving the nqueens problem
+
+        Must Know
+        1. Backtracking Algorithms:
+                - Understanding how backtracking algorithms work to explore all potential solutions to a problem and backtrack when a solution cannot be completed.
+                - Backtracking Introduction
+
+        2. Recursion:
+                - Using recursive functions to implement backtracking algorithms.
+                - Recursion in Python
+
+        3. List Manipulations in Python:
+                - Creating and manipulating lists, especially to store the positions of queens on the board.
+                - Python Lists
+
+        4. Python Command Line Arguments:
+                - Handling command-line arguments with the sys module.
+                - Command Line Arguments in Python
+
+        By studying these concepts and utilizing the resources provided, you will be equipped with the knowledge required to implement an efficient solution to the N queens problem using Python. This project not only tests programming and problem-solving skills but also offers an excellent opportunity to learn about algorithmic thinking and optimization techniques.
