@@ -44,14 +44,14 @@ def nqueens(n):
 if __name__ == "__main__":
     n = sys.argv
     if len(n) != 2:
-        print("Usage: nqueens N")
+        print("Usage: nqueens N\n")
         sys.exit(1)
     try:
         nn = int(n[1])
         if nn < 4:
-            print("N must be at least 4")
+            print("N must be at least 4\n")
             sys.exit(1)
         nqueens(nn)
     except ValueError:
-        print("N must be a number")
+        print("N must be a number\n")
         sys.exit(1)
