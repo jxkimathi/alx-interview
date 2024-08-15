@@ -180,3 +180,28 @@ Most of the projects are some of the interview questions asked all by the anel t
             - JavaScript Array Methods
 
         By familiarizing yourself with these concepts and resources, you will be able to efficiently retrieve, process, and display Star Wars characters from the specified movie using the Star Wars API, demonstrating your ability to work with external APIs and manage asynchronous code in JavaScript.
+
+* [0x07-rotate_2d_matrix](./0x07-rotate_2d_matrix/) - Rotating a 2d matrix.
+
+        Must Know
+
+        1. Matrix Representation in Python:
+            - Understanding how 2D matrices are represented using lists of lists in Python.
+            - Accessing and modifying elements in a 2D matrix.
+
+        2. In-place Operations:
+            - Performing operations on data without creating a copy of the data structure.
+            - The importance of minimizing space complexity by modifying the matrix in place.
+
+        3. Matrix Transposition:
+            - Understanding the concept of transposing a matrix (swapping rows and columns).
+            - Implementing matrix transposition as a step in the rotation process.
+
+        4. Reversing Rows in a Matrix:
+            - Manipulating rows of a matrix by reversing their order as part of the rotation process.
+
+        5. Nested Loops:
+            - Using nested loops to iterate through 2D data structures like matrices.
+            - Modifying elements within nested loops to achieve the desired rotation.
+
+        By understanding these concepts and utilizing the provided resources, you will be able to approach the problem methodically, first transposing the matrix and then reversing each row to achieve a 90-degree clockwise rotation. This project not only tests your ability to manipulate 2D matrices but also challenges you to think about optimizing your solution to operate in-place, thus improving their problem-solving and algorithmic thinking skills in Python.
