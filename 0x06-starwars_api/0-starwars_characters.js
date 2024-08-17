@@ -1,7 +1,6 @@
 #!/usr/bin/node
-
 const request = require('request');
-const url = 'https://swapi-api.alx-tools.com/';
+const url = 'https://swapi-api.alx-tools.com/api';
 
 if (process.argv.length > 2) {
   const movieId = process.argv[2];
@@ -29,16 +28,16 @@ if (process.argv.length > 2) {
         });
       });
 
-      // Wait for all promises to resolve
+      // Wait for all promises to resolve and print the names
       Promise.all(characterPromises)
         .then(names => {
           names.forEach(name => console.log(name));
         })
         .catch(error => console.error(error));
-      } else {
-        console.error(`Failed to get film data: Status Code, ${response.statusCode}`);
-      }
-    });
-  } else {
-    console.log('Usage: ./0-starwars_characters.js <movie_id>');  
-  }
+    } else {
+      console.error(`Failed to get film data: Status code ${response.statusCode}`);
+    }
+  });
+} else {
+  console.log('Usage: ./0-starwars_characters.js <movie_id>');
+}
