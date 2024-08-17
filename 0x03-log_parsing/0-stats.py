@@ -1,60 +1,55 @@
 #!/usr/bin/python3
-"""This module contains a script that reads from stdin and computes metrics"""
-import re
+
+"""Import necessary modules"""
+
 import sys
 
-
-PATTERN = (r"^(\S+) ?"
-           r"- ?\[\S+ ?\S+\] "
-           r"\"GET /projects/260 HTTP/1\.1\" "
-           r"(\S+) (\S+)$")
+"""Define a function to print total file size and status codes"""
 
 
-def extract_status_and_size(line):
-    """Extracts the status code and size from a log line"""
-    match = re.search(PATTERN, line)
-
-    if match:
-        return (match.group(2), match.group(3))
-    else:
-        return None, None
+def _print(total_file_size, statuses):
+    """Prints the total file size and counts of each status code."""
+    print("File size: {:d}".format(total_file_size))
+    for key, value in sorted(statuses.items()):
+        if value != 0:
+            print("{}: {}".format(key, value))
 
 
-def printMetrics(total_size, status_codes):
-    """Prints the metrics for the log lines read so far"""
-    print("File size: {}".format(str(total_size)))
-    for status_code in sorted(status_codes.keys()):
-        if status_codes[status_code] != 0:
-            print("{}: {}".format(status_code, str(status_codes[status_code])))
+# Initialize a dictionary to count occurrences of specific status codes
+statuses = {
+    '200': 0, '301': 0,
+    '400': 0, '401': 0, '403': 0, '404': 0, '405': 0, '500': 0
+}
 
-
-status_codes = {
-                "200": 0, "301": 0,
-                "400": 0, "401": 0,
-                "403": 0, "404": 0,
-                "405": 0, "500": 0}
-total_size = 0
-lines = 0
+total_file_size = 0
+count = 0
 
 try:
+    # Read each line from standard input
     for line in sys.stdin:
-        lines += 1
+        args = line.split()
 
-        status_code, size = extract_status_and_size(line.strip())
-        if status_code and size:
-            try:
-                total_size += int(size)
-            except Exception:
-                pass
-            try:
-                if status_code in status_codes:
-                    status_codes[status_code] += 1
-            except Exception:
-                pass
+        # Ensure the line has enough elements to extract status code
+        if len(args) > 2:
+            status_code = args[-2]
+            file_size = int(args[-1])
 
-        if lines % 10 == 0 and lines != 0:
-            printMetrics(total_size, status_codes)
-    printMetrics(total_size, status_codes)
+            # Update the status code count
+            if status_code in statuses:
+                statuses[status_code] += 1
+
+            # Update the total file size
+            total_file_size += file_size
+            count += 1
+
+            # Print stats every 10 lines
+            if count == 10:
+                _print(total_file_size, statuses)
+                count = 0
+
 except KeyboardInterrupt:
-    printMetrics(total_size, status_codes)
-    raise
+    pass
+
+finally:
+    # Print final stats when the process ends
+    _print(total_file_size, statuses)
