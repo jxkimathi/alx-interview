@@ -2,7 +2,7 @@
 """UTF-8 validation module"""
 
 
-def validateUTF8(data):
+def validUTF8(data):
     """Determines if a given data set represents valid UTF-8 encoding"""
     num_bytes = 0
     for num in data:
