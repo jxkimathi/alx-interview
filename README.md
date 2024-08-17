@@ -132,6 +132,33 @@ Most of the projects are some of the interview questions asked all by the anel t
 
         By studying these concepts and utilizing the resources provided, you will be well-prepared to tackle the log parsing project, effectively handling data streams, parsing log entries, and computing metrics based on the processed data.
 
+* [0x04-utf8_validation](./0x04-utf8_validation/) - Checking whether an there is a valid utf-8 encoding.
+
+Must Know:
+
+        1. Bitwise Operations in Python:
+            - Understanding how to manipulate bits in Python, including operations like AND (&), OR (|), XOR (^), NOT (~), shifts (<<, >>).
+            - Python Bitwise Operators
+
+        2. UTF-8 Encoding Scheme:
+            - Familiarity with the UTF-8 encoding rules, including how characters are encoded into one or more bytes.
+            - Understanding the patterns that represent a valid UTF-8 encoded character.
+            - UTF-8 Wikipedia
+            - Characters, Symbols, and the Unicode Miracle
+            - The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets
+
+        3. Data Representation:
+            - How to represent and work with data at the byte level.
+            - Handling the least significant bits (LSB) of integers to simulate byte data.
+
+        4. List Manipulation in Python:
+            - Iterating through lists, accessing list elements, and understanding list comprehensions.
+            - Python Lists
+
+        5. Boolean Logic:
+            - Applying logical operations to make decisions within the program.
+By studying these concepts and utilizing the resources provided, you will be equipped to tackle the UTF-8 validation project, effectively applying bitwise operations and logical reasoning to determine the validity of UTF-8 encoded data.
+
 * [0x05-nqueens](./0x05-nqueens/) - Solving the nqueens problem
 
         Must Know
