@@ -134,7 +134,7 @@ Most of the projects are some of the interview questions asked all by the anel t
 
 * [0x04-utf8_validation](./0x04-utf8_validation/) - Checking whether an there is a valid utf-8 encoding.
 
-Must Know:
+        Must Know:
 
         1. Bitwise Operations in Python:
             - Understanding how to manipulate bits in Python, including operations like AND (&), OR (|), XOR (^), NOT (~), shifts (<<, >>).
@@ -157,7 +157,8 @@ Must Know:
 
         5. Boolean Logic:
             - Applying logical operations to make decisions within the program.
-By studying these concepts and utilizing the resources provided, you will be equipped to tackle the UTF-8 validation project, effectively applying bitwise operations and logical reasoning to determine the validity of UTF-8 encoded data.
+
+        By studying these concepts and utilizing the resources provided, you will be equipped to tackle the UTF-8 validation project, effectively applying bitwise operations and logical reasoning to determine the validity of UTF-8 encoded data.
 
 * [0x05-nqueens](./0x05-nqueens/) - Solving the nqueens problem
 
@@ -232,3 +233,29 @@ By studying these concepts and utilizing the resources provided, you will be equ
             - Modifying elements within nested loops to achieve the desired rotation.
 
         By understanding these concepts and utilizing the provided resources, you will be able to approach the problem methodically, first transposing the matrix and then reversing each row to achieve a 90-degree clockwise rotation. This project not only tests your ability to manipulate 2D matrices but also challenges you to think about optimizing your solution to operate in-place, thus improving their problem-solving and algorithmic thinking skills in Python.
+
+* [0x08-making_change](./0x08-making_change/) - 
+
+        Must Know:
+
+        1. Greedy Algorithms:
+        Understanding how greedy algorithms work and why they are suitable for the coin change problem.
+        Recognizing the limitations of greedy algorithms and scenarios where they might not provide the optimal solution.
+
+        2. Dynamic Programming:
+        Basic principles of dynamic programming as a method to solve optimization problems.
+        The concept of overlapping subproblems and optimal substructure in the context of the coin change problem.
+
+        3. Algorithmic Complexity:
+        Analyzing the time and space complexity of algorithms.
+        Striving for solutions with lower complexity to meet runtime constraints.
+
+        4. Problem-Solving Strategies:
+        Breaking down the problem into smaller, manageable sub-problems.
+        Iterative vs recursive approaches to dynamic programming.
+
+        5. Python Programming:
+        Manipulating lists and using list comprehensions.
+        Implementing functions with efficient looping and conditional statements.
+
+        By thoroughly understanding these concepts and utilizing the provided resources, you will be well-prepared to tackle the coin change problem. You will need to decide whether a greedy algorithm suffices for your particular set of coin denominations or if a more comprehensive dynamic programming approach is necessary to ensure correctness and efficiency. This project not only tests algorithmic skills but also reinforces the importance of choosing the right strategy based on problem constraints.
