@@ -234,7 +234,7 @@ Most of the projects are some of the interview questions asked all by the anel t
 
         By understanding these concepts and utilizing the provided resources, you will be able to approach the problem methodically, first transposing the matrix and then reversing each row to achieve a 90-degree clockwise rotation. This project not only tests your ability to manipulate 2D matrices but also challenges you to think about optimizing your solution to operate in-place, thus improving their problem-solving and algorithmic thinking skills in Python.
 
-* [0x08-making_change](./0x08-making_change/) - 
+* [0x08-making_change](./0x08-making_change/) - Finding the minimum number of coins needed to make up a given amount.
 
         Must Know:
 
@@ -259,3 +259,39 @@ Most of the projects are some of the interview questions asked all by the anel t
         Implementing functions with efficient looping and conditional statements.
 
         By thoroughly understanding these concepts and utilizing the provided resources, you will be well-prepared to tackle the coin change problem. You will need to decide whether a greedy algorithm suffices for your particular set of coin denominations or if a more comprehensive dynamic programming approach is necessary to ensure correctness and efficiency. This project not only tests algorithmic skills but also reinforces the importance of choosing the right strategy based on problem constraints.
+
+* [0x09-island_perimeter](./0x09-island_perimeter/) - Finding the perimeter of an island surrounded by a body of water.
+
+        Must Know:
+
+        1. 2D Arrays (Matrices):
+            - Accessing and iterating over elements in a 2D array.
+            - Understanding how to navigate through adjacent cells (horizontally and vertically).
+
+        2. Conditional Logic:
+            - Applying conditions to determine whether a cell contributes to the perimeter of the island.
+
+        3. Counting Techniques:
+            - Developing a method to count the edges that contribute to the island’s perimeter.
+
+        4. Problem-Solving Strategies:
+            - Breaking down the problem into smaller tasks, such as identifying land cells and calculating their contribution to the perimeter.
+
+        5. Python Programming:
+            - Nested loops for iterating over grid cells.
+            - Conditional statements to check the status of adjacent cells.
+
+        Resources:
+        - Python Official Documentation:
+            - Nested Lists: Understanding how to work with lists within lists in Python.
+
+        - GeeksforGeeks Articles:
+            - Python Multi-dimensional Arrays: A guide to working with 2D arrays in Python effectively.
+
+        - TutorialsPoint:
+            - Python Lists: Explains how to create, access, and manipulate lists in Python, which is essential for working with a grid.
+
+        - YouTube Tutorials:
+            - Python 2D arrays and lists
+
+        By understanding these concepts and utilizing the provided resources, you will be equipped to approach the problem methodically. You’ll need to iterate over the grid, apply logical operations to identify the perimeter of the island, and account for the specific conditions described in the task. This project not only tests your algorithmic thinking but also reinforces your ability to manipulate data structures and apply logical reasoning to solve problems.
