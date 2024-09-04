@@ -281,17 +281,28 @@ Most of the projects are some of the interview questions asked all by the anel t
             - Nested loops for iterating over grid cells.
             - Conditional statements to check the status of adjacent cells.
 
-        Resources:
-        - Python Official Documentation:
-            - Nested Lists: Understanding how to work with lists within lists in Python.
-
-        - GeeksforGeeks Articles:
-            - Python Multi-dimensional Arrays: A guide to working with 2D arrays in Python effectively.
-
-        - TutorialsPoint:
-            - Python Lists: Explains how to create, access, and manipulate lists in Python, which is essential for working with a grid.
-
-        - YouTube Tutorials:
-            - Python 2D arrays and lists
-
         By understanding these concepts and utilizing the provided resources, you will be equipped to approach the problem methodically. You’ll need to iterate over the grid, apply logical operations to identify the perimeter of the island, and account for the specific conditions described in the task. This project not only tests your algorithmic thinking but also reinforces your ability to manipulate data structures and apply logical reasoning to solve problems.
+
+* [0x0A-primegame](./0x0A-primegame/) - Solves a competitive game scenario.
+
+        Must Know:
+
+        1. Prime Numbers:
+            - Understanding what prime numbers are.
+            - Efficient algorithms for identifying prime numbers within a range.
+
+        2. Sieve of Eratosthenes:
+            - An efficient algorithm for finding all prime numbers up to any given limit, which can be particularly useful for this task.
+
+        3. Game Theory:
+            - Basic principles of competitive games where players take turns and the concept of optimal play.
+            - Understanding win conditions and strategies that lead to a win or loss.
+
+        4. Dynamic Programming/Memoization:
+            - Using previous results to make future calculations faster, potentially necessary for optimizing the solution for multiple rounds of the game.
+
+        5. Python Programming:
+            - Loops and conditional statements for implementing game logic and algorithms.
+            - Arrays and lists for storing the integers and tracking removed numbers.
+
+        By grasping these concepts and making use of the recommended resources, you will be well-equipped to approach the problem with a solid understanding of both the mathematical and programming challenges involved. The key to success in this project lies in applying efficient algorithms to manage the game’s state and making optimal decisions based on the game’s rules.
